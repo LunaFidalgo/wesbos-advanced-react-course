@@ -4,7 +4,7 @@ import gpl from 'graphql-tag';
 import styled from 'styled-components';
 import Item from './Item';
 
-const ALL_ITEMS_QUERY = gpl`
+export const ALL_ITEMS_QUERY = gpl`
   query ALL_ITEMS_QUERY {
     items {
     id
