@@ -49,13 +49,10 @@ class CreateItem extends React.Component {
     data.append('file', files[0]);
     data.append('upload_preset', 'sickfits');
 
-    const response = await fetch(
-      'https://api.cloudinary.com/v1_1/dzpmxapkq/image/upload',
-      {
-        method: 'POST',
-        body: data,
-      }
-    );
+    const response = await fetch('', {
+      method: 'POST',
+      body: data,
+    });
     const file = await response.json();
 
     this.setState({
