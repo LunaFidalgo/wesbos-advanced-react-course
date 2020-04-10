@@ -38,8 +38,8 @@ export default class Items extends Component {
           {({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error{error.message}</p>;
+            if (!data.items) return <p>No items! </p>;
 
-            console.log(data);
             return (
               <ItemList>
                 {data.items.map((item) => (
